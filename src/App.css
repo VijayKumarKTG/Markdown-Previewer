@@ -1,38 +1,65 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  /* background-color: rgba(106, 245, 88, 0.527); */
+  background-image: url('backgroundv2.png');
+}
+
+header {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(255, 166, 0, 0.753);
+  /* color: darkblue; */
   color: white;
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  font-size: larger;
+  font-weight: 800;
+  font-family: 'Press Start 2P', cursive, 'Segoe UI', Tahoma, Geneva, Verdana,
+    sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+header:hover,
+.editor .head:hover,
+.previewer .head:hover {
+  background-color: gainsboro;
+  color: darkblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editor,
+.previewer {
+  margin-top: 100px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.previewer {
+  margin-top: 30px;
+}
+
+.editor .head,
+.previewer .head {
+  background-color: rgba(255, 166, 0, 0.753);
+  color: white;
+  padding: 10px;
+  font-family: 'Press Start 2P', cursive, 'Segoe UI', Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+
+.editor #editor,
+.previewer #preview {
+  width: 100%;
+  height: 500px;
+  border: none;
+  font-size: 1.5em;
+  background-color: rgba(220, 220, 220, 0.733);
+  text-align: left;
+}
+
+.previewer #preview {
+  overflow-y: auto;
 }
